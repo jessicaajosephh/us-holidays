@@ -2,7 +2,7 @@ class CLI
     
     def call
         greeting
-        API.get_holiday_data
+        #API.get_holiday_data
         menu
     end
 
@@ -29,15 +29,16 @@ class CLI
     end
 
     def list_of_holidays
+        puts "Select which holiday you would like information about."
         puts "holiday 1"
         puts "holiday 2"
         puts "holiday 3"
-        puts "Select which holiday you would like information about."
         input = gets.strip.downcase
+
         holiday_selection(input)
     end
 
-    def holiday_selection
+    def holiday_selection(holiday)
         puts "#{holiday}"
     end
 
