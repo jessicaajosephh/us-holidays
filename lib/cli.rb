@@ -37,7 +37,9 @@ class CLI
         holiday_selection(input)
     end
 
-    
+    def holiday_selection
+        puts "#{holiday}"
+    end
 
     def invalid_entry
         puts "Invalid entry, please try again."
