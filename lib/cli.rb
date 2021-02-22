@@ -15,7 +15,7 @@ class CLI
         input = gets.strip.downcase
 
         if input == "holidays"
-            puts "holidays"
+            list_of_holidays
         elsif input == "exit"
             goodbye
         else
@@ -25,6 +25,12 @@ class CLI
 
     def goodbye
         puts "Goodbye! Thanks for stopping in!"
+    end
+
+    def list_of_holidays
+        puts "holiday 1"
+        puts "holiday 2"
+        puts "holiday 3"
     end
 
 end
