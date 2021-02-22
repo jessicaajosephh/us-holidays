@@ -19,7 +19,7 @@ class CLI
         elsif input == "exit"
             goodbye
         else
-            puts "Invalid entry, please try again."
+            invalid_entry
         end
     end
 
@@ -31,6 +31,10 @@ class CLI
         puts "holiday 1"
         puts "holiday 2"
         puts "holiday 3"
+    end
+
+    def invalid_entry
+        puts "Invalid entry, please try again."
     end
 
 end
