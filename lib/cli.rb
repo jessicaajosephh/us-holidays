@@ -2,6 +2,7 @@ class CLI
     
     def call
         greeting
+        API.get_data
         menu
     end
 
