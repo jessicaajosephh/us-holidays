@@ -2,7 +2,7 @@ class CLI
     
     def call
         greeting
-        API.get_data
+        API.get_holiday_data
         menu
     end
 
@@ -32,7 +32,12 @@ class CLI
         puts "holiday 1"
         puts "holiday 2"
         puts "holiday 3"
+        puts "Select which holiday you would like information about."
+        input = gets.strip.downcase
+        holiday_selection(input)
     end
+
+    
 
     def invalid_entry
         puts "Invalid entry, please try again."
