@@ -1,8 +1,7 @@
 class CLI
     
     def call
-        puts greeting
-        API.get_holiday_data
+        greeting
         menu
     end
 
@@ -13,7 +12,19 @@ class CLI
     end
 
     def menu 
-        
+        input = gets.strip.downcase
+
+        if input == "holidays"
+            puts "holidays"
+        elsif input == "exit"
+            goodbye
+        else
+            puts "Invalid entry, please try again."
+        end
+    end
+
+    def goodbye
+        puts "Goodbye! Thanks for stopping in!"
     end
 
 end
