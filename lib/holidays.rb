@@ -4,7 +4,9 @@ class Holidays
 
     def initialize(holiday_hash)
         holiday_hash.each do |key, value|
+            self.class.attr_accessor(key)
             self.send("#{key}=", value)
+        end
        @@all << self
     end
 
