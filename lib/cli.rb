@@ -45,18 +45,24 @@ class CLI
 
     def holiday_selection(holiday)
         holiday = Holidays.find_by_name(holiday)
-        holiday.each do |hol|
-            puts "Name: #{hol.name}"
-            puts "Date: #{hol.date}"
-            puts "Country: #{hol.countryCode}"
+        holiday.each do |holiday_info|
+            puts "------------------------------"
+            puts "Holiday Name: #{holiday_info.name}"
+            puts "Holiday Date: #{holiday_info.date}"
+            puts "Country: #{holiday_info.countryCode}"
+            puts "------------------------------"
+            puts "Continue searching for holidays, by entering the holiday name."
+            puts "If you are finished, enter 'exit'."
             menu
-            
+
+
+        end
             
 
             #holiday.each do {|hol| key == value}
             #self.class.attr_accessor(key)
             #self.send("#{key}=", value)
-        end
+        
 
     end
 
