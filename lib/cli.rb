@@ -33,8 +33,9 @@ class CLI
 
     def list_of_holidays
         puts "Select which holiday you would like information about."
-        Holidays.all.each_with_index do |holiday, index|
+             Holidays.all.each_with_index do |holiday, index|
             puts "#{index + 1}. #{holiday.name}" 
+
         end
         input = gets.strip.downcase
 
