@@ -11,9 +11,15 @@ class CLI
     end
 
     def greeting
+        puts "-----------------------------------------------------------------------------"
+        puts ""
         puts "Welcome! Start searching for holidays now!"
-        puts "To search for US federal holidays, enter 'holidays'"
-        puts "If there is nothing else you would like to do at the moment, enter 'exit'"
+        puts ""
+        puts "--To search for US federal holidays, enter 'holidays'"
+        puts ""
+        puts "--If there is nothing else you would like to do at the moment, enter 'exit'"
+        puts ""
+        puts "-----------------------------------------------------------------------------"
     end
 
     def menu 
@@ -29,13 +35,22 @@ class CLI
     end
 
     def goodbye
+        puts ""
+        puts "-------------------------------------"
         puts "Goodbye! Thanks for stopping in!"
+        puts "-------------------------------------"
     end
 
     def list_of_holidays
+        puts "-----------------------------------------------------------------------------"
+        puts ""
         puts "Select which holiday you would like information about."
-             Holidays.all.each_with_index do |holiday, index|
+        puts ""
+          Holidays.all.each_with_index do |holiday, index|
+            #puts ""
             puts "#{index + 1}. #{holiday.name}" 
+            
+
 
         end
         input = gets.strip.downcase
@@ -51,6 +66,7 @@ class CLI
             puts "Holiday Date: #{holiday_info.date}"
             puts "Country: #{holiday_info.countryCode}"
             puts "------------------------------"
+            puts ""
             puts "Continue searching for holidays, enter 'holidays'."
             puts "If you are finished, enter 'exit'."
             menu
