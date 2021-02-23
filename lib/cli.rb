@@ -1,8 +1,11 @@
 class CLI
+
+    def initialize
+        API.new.get_holiday_data
+    end
     
     def call
         greeting
-        #API.new.create_holiday
         menu
     end
 
