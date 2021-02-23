@@ -51,19 +51,12 @@ class CLI
             puts "Holiday Date: #{holiday_info.date}"
             puts "Country: #{holiday_info.countryCode}"
             puts "------------------------------"
-            puts "Continue searching for holidays, by entering the holiday name."
+            puts "Continue searching for holidays, enter 'holidays'."
             puts "If you are finished, enter 'exit'."
             menu
 
-
         end
             
-
-            #holiday.each do {|hol| key == value}
-            #self.class.attr_accessor(key)
-            #self.send("#{key}=", value)
-        
-
     end
 
 
