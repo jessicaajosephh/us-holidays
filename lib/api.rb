@@ -6,7 +6,8 @@ class API
 
     def get_holiday_data
         holiday_hash = HTTParty.get(@url)
-        holiday_hash
+        holiday_array = holiday_hash
+        self.create_holiday(holiday_array)
         #binding.pry
     end
 
