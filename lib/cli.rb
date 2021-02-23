@@ -2,7 +2,7 @@ class CLI
     
     def call
         greeting
-        #API.get_holiday_data
+        #API.new.create_holiday
         menu
     end
 

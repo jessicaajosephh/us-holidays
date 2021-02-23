@@ -10,5 +10,12 @@ class API
         #binding.pry
     end
 
+    def create_holiday(holiday_array)
+        holiday_array.each do |holiday_hash|
+           Holidays.new(holiday_hash) 
+        end
+    end
+
+
 
 end
