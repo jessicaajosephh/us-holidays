@@ -1,13 +1,15 @@
 class Holidays
 
-    #@@all = []
+    @@all = []
 
-    #def initialize(holiday_hash)
-     #   @@all << self
-    #end
+    def initialize(holiday_hash)
+        holiday_hash.each do |key, value|
+            self.send("#{key}=", value)
+       @@all << self
+    end
 
-    #def self.all
-     #   @@all
-    #end
+    def self.all
+       @@all
+    end
 
 end
