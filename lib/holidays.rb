@@ -16,7 +16,7 @@ class Holidays
 
     def self.find_by_name(name)
         self.all.select do |holiday|
-          holiday.name == name
+          holiday.name.downcase == name
         end 
     end
 

@@ -1,3 +1,4 @@
+#require 'pry'
 class CLI
 
     def initialize
@@ -43,11 +44,13 @@ class CLI
     end
 
     def holiday_selection(holiday)
-        puts "#{holiday}"
+        hol = Holidays.find_by_name(holiday)
+        #binding.pry
     end
 
     def invalid_entry
         puts "Invalid entry, please try again."
+        menu
     end
 
 end
