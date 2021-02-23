@@ -51,6 +51,8 @@ class CLI
             puts "Country: #{hol.countryCode}"
             menu
             
+            
+
             #holiday.each do {|hol| key == value}
             #self.class.attr_accessor(key)
             #self.send("#{key}=", value)
